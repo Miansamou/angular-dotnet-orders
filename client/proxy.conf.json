@@ -1,0 +1,20 @@
+{
+  "/products": {
+    "target": "http://localhost:5018", 
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/auth": {
+    "target": "http://localhost:5018", 
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  },
+  "/users": {
+    "target": "http://localhost:5018", 
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

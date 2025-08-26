@@ -1,0 +1,38 @@
+<div class="page">
+  <div class="card" [formGroup]="form" (ngSubmit)="submit()" role="form">
+    <h1>Criar conta</h1>
+
+    <label>
+      <span>Nome</span>
+      <input type="text" formControlName="name" placeholder="Seu nome" />
+    </label>
+    @if (form.controls.name.touched && form.controls.name.invalid) {
+      <div class="err">Informe um nome válido.</div>
+    }
+
+    <label>
+      <span>Email</span>
+      <input type="email" formControlName="email" placeholder="exemplo@email.com" />
+    </label>
+    @if (form.controls.email.touched && form.controls.email.invalid) {
+      <div class="err">Email inválido.</div>
+    }
+
+    <label>
+      <span>Senha</span>
+      <input type="password" formControlName="password" placeholder="••••••••" />
+    </label>
+
+    <label>
+      <span>Confirmar senha</span>
+      <input type="password" formControlName="confirm" placeholder="••••••••" />
+    </label>
+    @if (form.touched && form.errors?.['mismatch']) {
+      <div class="err">As senhas não conferem.</div>
+    }
+
+    <button type="submit" [disabled]="form.invalid || loading()">
+      @if (!loading()) { Cadastrar } @else { Processando… }
+    </button>
+  </div>
+</div>

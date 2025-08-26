@@ -1,0 +1,23 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+.idea/
+
+# Angular
+client/node_modules/
+client/.angular/
+client/dist/
+
+# Logs/OS
+*.log
+Thumbs.db
+
+# Secrets/config locais
+**/appsettings.*.Local.json
+**/secrets.json
+
+# Rider
+*.DotSettings.user
